@@ -1,0 +1,1368 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 響應式設計*/
+img{
+        max-width:100%;
+        height:auto;
+}
+/*從這行以下開始*/
+
+.wrap{
+    margin: 0 auto;
+}
+
+.header{
+    height: 175px;
+    background: #424242;
+}
+
+.logo{
+    position: absolute;
+    top:30px;
+    left:13%;
+}
+
+.heightP{
+
+    font-family:AppleSystemUIFont;
+    font-size: 18px;
+    color: #FFD366;
+    position: absolute;
+    top:15px;
+    left:40%;
+
+
+}
+
+.heightinput{
+    width: 200px;
+    height: 30px;
+    background: rgba(255,255,255,0.18);
+    border: 2px solid #FFD366;
+    border-radius: 10px;
+    position: absolute;
+    top:42px;
+    left:40%;
+    font-family: SFNSDisplay;
+    font-size: 24px;
+    color: #FFFFFF ;
+    text-align: center;
+    
+}
+
+.weightP{
+    font-family:AppleSystemUIFont;
+    font-size: 18px;
+    color: #FFD366;
+    position: absolute;
+    top:97px;
+    left:40%;
+
+
+}
+
+.weightinput{
+    width: 200px;
+    height: 30px;
+    background: rgba(255,255,255,0.18);
+    border: 2px solid #FFD366;
+    border-radius: 10px;
+    position: absolute;
+    top:120px;
+    left:40%;
+    font-family: SFNSDisplay;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: center;
+    
+
+  
+}
+
+.inputbtn{
+    position: absolute;
+    top:40px;
+    left:70%;
+    background: #FFD366;
+    font-family: PingFangTC-Regular;
+    font-size: 32px;
+    color: #424242;
+    border-radius:100%;
+    width: 120px;
+    height: 120px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 120px;
+
+}
+.inputbtn:hover{
+    background: #FFD366;
+    box-shadow: 0 1px 6px 3px rgba(255,195,49,0.64);
+}
+
+.btnchange{
+    display: none;
+    font-family: PingFangTC-Regular;
+    font-size: 24px;
+    color: #424242;
+    border-radius:100%;
+    width: 120px;
+    height: 120px;
+    border: 6px solid #FF982D;
+    position: absolute;
+    top:30px;
+    left:69.5%;
+}
+.btnchangetitle{
+    position: relative;
+    top:43px;
+    left:20%;
+    font-family: SFNSDisplay;
+    font-size: 32px;
+    color: #FF982D;
+}
+
+.btnchangecontent{
+    position: relative;
+    top:50px;
+    left:37%;
+    font-family: AppleSystemUIFont;
+    font-size: 14px;
+    color: #FF982D;
+}
+
+.btnchangeanser{
+    width: 128px;
+    height: 32px;
+    position: relative;
+    top:0px;
+    left:120%;
+    font-family: SFNSDisplay;
+    font-size: 32px;
+    color:#FF982D;
+}
+
+.btnrestar{
+    width: 30px;
+    height: 30px;
+    background-color: #FF982D;
+    border: 3px solid #424242;
+    border-radius:50%;
+    position: relative;
+    top:15px;
+    left:70%; 
+    padding:5px 8px;
+}
+
+.contentTitle{
+    text-align: center;
+    font-size: 24px;
+    color: #424242;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.delAllred{
+    width: 64px;
+    height: 20px;
+    font-size: 16px;
+    position: relative;
+    left:50px;
+    top:-25px;
+    background: #FFD366;
+    color: #424242;
+    border: 3px solid #424242;
+    border-radius: 25%;
+    padding: 1px;
+    line-height: 20px;
+    /*旋轉特效*/
+    transform: rotate(0deg);
+    transition: width 2s,height 2s,transform 2s;
+
+
+}
+
+.delAllred:hover{
+    box-shadow: 10px 10px 5px #888888;
+    /*旋轉特效*/
+    transition: width 2s ,height 2s, transform 2s;
+    transition-timing-function: ease;
+    transform: rotate(360deg);
+}
+
+.BMIList{
+    width: 80%;
+    margin: 0 10%;
+    height: 60%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: auto;
+}
+
+.list{
+   width:50%;
+   height: 62px;
+   margin-bottom: 2%;
+   
+
+}
+
+.list1{
+    font-family: SFNSDisplay;
+    font-size: 20px;
+    color: #4A4A4A;
+    line-height: 62px;
+    position: relative;
+    top:0px;
+    left:69px;
+    font-weight: bold;
+
+    
+}
+.list2{
+    font-family: AppleSystemUIFont;
+    font-size: 12px;
+    color: #424242;
+    position: relative;
+    top:-34px;
+    left:306px;
+
+}
+.list3{
+    font-family: SFNSDisplay;
+    font-size: 20px;
+    color: #4A4A4A;
+    position: relative;
+    top:-50px;
+    left:354px;
+    font-weight: bold;
+}
+.list4{
+    font-family: AppleSystemUIFont;
+    font-size: 12px;
+    color: #424242;
+    position: relative;
+    top:-65px;
+    left:472px;
+}
+.list5{
+    font-family: SFNSDisplay;
+    font-size: 20px;
+    color: #4A4A4A;
+    position: relative;
+    top:-81px;
+    left:538px;
+    font-weight: bold;
+}
+.list6{
+    font-family: AppleSystemUIFont;
+    font-size: 12px;
+    color: #424242;
+    position: relative;
+    top:-96px;
+    left:680px;
+}
+.list7{
+    font-family: SFNSDisplay;
+    font-size: 20px;
+    color: #4A4A4A;
+    position: relative;
+    top:-111px;
+    left:740px;
+    font-weight: bold;
+}
+
+.list8{
+    font-family: AppleSystemUIFont;
+    font-size: 12px;
+    color: #424242;
+    position: relative;
+    top:-127px;
+    left:890px;
+}
+
+.footer{
+    width: 100%;
+    height: 60px;
+    background: #FFD366;
+    position: fixed;
+    bottom: 0;
+}
+.footer img{
+    padding-top: 2px;
+    margin-left: 48%;
+}
+
+
+
+
+/*響應式*/
+@media(max-width:1024px){
+    
+    .header{
+        height: 175px;
+        background: #424242;
+    }
+    
+    .logo{
+        position: absolute;
+        top:30px;
+        left:13%;
+    }
+    
+    .heightP{
+    
+        font-family:AppleSystemUIFont;
+        font-size: 18px;
+        color: #FFD366;
+        position: absolute;
+        top:15px;
+        left:40%;
+    
+    
+    }
+    
+    .heightinput{
+       
+        
+        background: rgba(255,255,255,0.18);
+        border: 2px solid #FFD366;
+        border-radius: 10px;
+        position: absolute;
+        top:42px;
+        left:40%;
+        font-family: SFNSDisplay;
+        font-size: 24px;
+        color: #FFFFFF ;
+        
+    }
+    
+    .weightP{
+        font-family:AppleSystemUIFont;
+        font-size: 18px;
+        color: #FFD366;
+        position: absolute;
+        top:97px;
+        left:40%;
+    
+    
+    }
+    
+    .weightinput{
+        
+        background: rgba(255,255,255,0.18);
+        border: 2px solid #FFD366;
+        border-radius: 10px;
+        position: absolute;
+        top:120px;
+        left:40%;
+        font-family: SFNSDisplay;
+        font-size: 24px;
+        color: #FFFFFF;
+        
+    
+      
+    }
+    
+    .inputbtn{
+        position: absolute;
+        top:40px;
+        left:70%;
+       
+    }
+    .btnchange{
+        display: none;
+        font-family: PingFangTC-Regular;
+        font-size: 24px;
+        color: #424242;
+        border-radius:100%;
+        width: 120px;
+        height: 120px;
+        border: 6px solid #FF982D;
+        position: absolute;
+        top:30px;
+        left:69.5%;
+    }
+    .btnchangetitle{
+        position: relative;
+        top:43px;
+        left:20%;
+        font-family: SFNSDisplay;
+        font-size: 32px;
+        color: #FF982D;
+    }
+    
+    .btnchangecontent{
+        position: relative;
+        top:50px;
+        left:37%;
+        font-family: AppleSystemUIFont;
+        font-size: 14px;
+        color: #FF982D;
+    }
+    
+    .btnchangeanser{
+        width: 128px;
+        height: 32px;
+        position: relative;
+        top:0px;
+        left:120%;
+        font-family: SFNSDisplay;
+        font-size: 32px;
+        color:#FF982D;
+    }
+    
+    .btnrestar{
+        width: 30px;
+        height: 30px;
+        background-color: #FF982D;
+        border: 3px solid #424242;
+        border-radius:50%;
+        position: relative;
+        top:15px;
+        left:70%; 
+        padding:5px 8px;
+    }
+    
+    .contentTitle{
+        text-align: center;
+        font-size: 24px;
+        color: #424242;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    
+    .delAllred{
+        position: relative;
+        left:72%;
+        top:-25px;
+        background: #FFD366;
+        color: #424242;
+        border: 3px solid #424242;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .BMIList{
+        width: 80%;
+        margin: 0 10%;
+        height: 60%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        scroll-behavior: auto;
+    }
+    
+    .list{
+       width:100%;
+       height: 62px;
+       margin-bottom: 2%;
+       
+    
+    }
+    
+    .list1{
+        font-family: SFNSDisplay;
+        font-size: 20px;
+        color: #4A4A4A;
+        line-height: 62px;
+        position: relative;
+        top:0px;
+        left:69px;
+    
+        
+    }
+    .list2{
+        font-family: AppleSystemUIFont;
+        font-size: 12px;
+        color: #424242;
+        position: relative;
+        top:-34px;
+        left:206px;
+    
+    }
+    .list3{
+        font-family: SFNSDisplay;
+        font-size: 20px;
+        color: #4A4A4A;
+        position: relative;
+        top:-50px;
+        left:254px;
+        
+    }
+    .list4{
+        font-family: AppleSystemUIFont;
+        font-size: 12px;
+        color: #424242;
+        position: relative;
+        top:-65px;
+        left:372px;
+    }
+    .list5{
+        font-family: SFNSDisplay;
+        font-size: 20px;
+        color: #4A4A4A;
+        position: relative;
+        top:-81px;
+        left:438px;
+    }
+    .list6{
+        font-family: AppleSystemUIFont;
+        font-size: 12px;
+        color: #424242;
+        position: relative;
+        top:-96px;
+        left:580px;
+    }
+    .list7{
+        font-family: SFNSDisplay;
+        font-size: 20px;
+        color: #4A4A4A;
+        position: relative;
+        top:-111px;
+        left:640px;
+    }
+    
+    .list8{
+        font-family: AppleSystemUIFont;
+        font-size: 12px;
+        color: #424242;
+        position: relative;
+        top:-127px;
+        left:750px;
+    }
+    
+    .footer{
+        width: 100%;
+        height: 60px;
+        background: #FFD366;
+        position: fixed;
+        bottom: 0px;
+    }
+    .footer img{
+        padding-top: 2px;
+        margin-left: 48%;
+    }
+}
+
+@media(max-width:768px){
+    
+    .header{
+        height: 175px;
+        background: #424242;
+    }
+    
+    .logo{
+        position: absolute;
+        top:30px;
+        left:10%;
+    }
+    
+    .heightP{
+    
+        font-family:AppleSystemUIFont;
+        font-size: 18px;
+        color: #FFD366;
+        position: absolute;
+        top:15px;
+        left:30%;
+    
+    
+    }
+    
+    .heightinput{
+        
+        
+        background: rgba(255,255,255,0.18);
+        border: 2px solid #FFD366;
+        border-radius: 10px;
+        position: absolute;
+        top:42px;
+        left:30%;
+        font-family: SFNSDisplay;
+        font-size: 24px;
+        color: #FFFFFF ;
+        
+    }
+    
+    .weightP{
+        font-family:AppleSystemUIFont;
+        font-size: 18px;
+        color: #FFD366;
+        position: absolute;
+        top:97px;
+        left:30%;
+    
+    
+    }
+    
+    .weightinput{
+        
+       
+        background: rgba(255,255,255,0.18);
+        border: 2px solid #FFD366;
+        border-radius: 10px;
+        position: absolute;
+        top:120px;
+        left:30%;
+        font-family: SFNSDisplay;
+        font-size: 24px;
+        color: #FFFFFF;
+        
+    
+      
+    }
+    
+    .inputbtn{
+        position: absolute;
+        top:40px;
+        left:65%;
+        background: #FFD366;
+        font-family: PingFangTC-Regular;
+        font-size: 32px;
+        color: #424242;
+        border-radius:100%;
+        width: 120px;
+        height: 120px;
+        font-weight: bold;
+    }
+    .btnchange{
+        display: none;
+        font-family: PingFangTC-Regular;
+        font-size: 24px;
+        color: #424242;
+        border-radius:100%;
+        width: 120px;
+        height: 120px;
+        border: 6px solid #FF982D;
+        position: absolute;
+        top:30px;
+        left:65%;
+    }
+    .btnchangetitle{
+        position: relative;
+        top:43px;
+        left:20%;
+        font-family: SFNSDisplay;
+        font-size: 32px;
+        color: #FF982D;
+       
+    }
+    
+    .btnchangecontent{
+        position: relative;
+        top:50px;
+        left:37%;
+        font-family: AppleSystemUIFont;
+        font-size: 14px;
+        color: #FF982D;
+        
+    }
+    
+    .btnchangeanser{
+        
+        position: relative;
+        top:0px;
+        left:120%;
+        font-family: SFNSDisplay;
+        font-size: 26px;
+        color:#FF982D;
+        
+    }
+    
+    .btnrestar{
+        width: 30px;
+        height: 30px;
+        background-color: #FF982D;
+        border: 3px solid #424242;
+        border-radius:50%;
+        position: relative;
+        top:15px;
+        left:70%; 
+        padding:5px 8px;
+    }
+    
+    .contentTitle{
+        text-align: center;
+        font-size: 24px;
+        color: #424242;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    
+    .delAllred{
+        position: relative;
+        left:72%;
+        top:-25px;
+        background: #FFD366;
+        color: #424242;
+        border: 3px solid #424242;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .BMIList{
+        width: 80%;
+        margin: 0 10%;
+        height: 10%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        scroll-behavior: auto;
+    }
+    
+    .list{
+       width:100%;
+       height: 40px;
+       margin-bottom: 2%;
+       
+    
+    }
+    
+    .list1{
+        font-family: SFNSDisplay;
+        font-size: 20px;
+        color: #4A4A4A;
+        line-height: 62px;
+        position: relative;
+        top:-10px;
+        left:25px;
+    
+        
+    }
+    .list2{
+        font-family: AppleSystemUIFont;
+        font-size: 12px;
+        color: #424242;
+        position: relative;
+        top:-45px;
+        left:126px;
+    
+    }
+    .list3{
+        font-family: SFNSDisplay;
+        font-size: 20px;
+        color: #4A4A4A;
+        position: relative;
+        top:-62px;
+        left:164px;
+        
+    }
+    .list4{
+        font-family: AppleSystemUIFont;
+        font-size: 12px;
+        color: #424242;
+        position: relative;
+        top:-78px;
+        left:220px;
+    }
+    .list5{
+        font-family: SFNSDisplay;
+        font-size: 20px;
+        color: #4A4A4A;
+        position: relative;
+        top:-95px;
+        left:280px;
+    }
+    .list6{
+        font-family: AppleSystemUIFont;
+        font-size: 12px;
+        color: #424242;
+        position: relative;
+        top:-110px;
+        left:360px;
+    }
+    .list7{
+        font-family: SFNSDisplay;
+        font-size: 20px;
+        color: #4A4A4A;
+        position: relative;
+        top:-128px;
+        left:420px;
+    }
+    
+    .list8{
+        font-family: AppleSystemUIFont;
+        font-size: 12px;
+        color: #424242;
+        position: relative;
+        top:-142px;
+        left:500px;
+    }
+    
+    .footer{
+        width: 100%;
+        height: 60px;
+        background: #FFD366;
+        position: fixed;
+        bottom: 0px;
+    }
+    .footer img{
+        padding-top: 2px;
+        margin-left: 48%;
+    }
+}
+
+@media(max-width:425px){
+    
+    .header{
+        height: 175px;
+        background: #424242;
+    }
+    
+    .logo{
+        position: absolute;
+        top:45px;
+        left:5%;
+        width: 90px;
+    }
+    
+    .heightP{
+    
+        font-family:AppleSystemUIFont;
+        font-size: 14px;
+        color: #FFD366;
+        position: absolute;
+        top:20px;
+        left:30%;
+    
+    
+    }
+    
+    .heightinput{
+        width: 125px;
+        height: 20px;
+        background: rgba(255,255,255,0.18);
+        border: 2px solid #FFD366;
+        border-radius: 10px;
+        position: absolute;
+        top:42px;
+        left:30%;
+        font-family: SFNSDisplay;
+        font-size: 18px;
+        color: #FFFFFF ;
+        text-align: center;
+        
+    }
+    
+    .weightP{
+        font-family:AppleSystemUIFont;
+        font-size: 14px;
+        color: #FFD366;
+        position: absolute;
+        top:97px;
+        left:30%;
+    
+    
+    }
+    
+    .weightinput{
+        width: 125px;
+        height: 20px;
+        background: rgba(255,255,255,0.18);
+        border: 2px solid #FFD366;
+        border-radius: 10px;
+        position: absolute;
+        top:120px;
+        left:30%;
+        font-family: SFNSDisplay;
+        font-size: 18px;
+        color: #FFFFFF;
+        text-align: center;
+        
+    
+      
+    }
+    
+    .inputbtn{
+        position: absolute;
+        top:40px;
+        left:70%;
+        background: #FFD366;
+        font-family: PingFangTC-Regular;
+        font-size: 22px;
+        color: #424242;
+        border-radius:100%;
+        width: 90px;
+        height:90px;
+        font-weight: bold;
+        line-height: 90px;
+    }
+    .btnchange{
+        display: none;
+        font-family: PingFangTC-Regular;
+        font-size: 12px;
+        color: #424242;
+        border-radius:100%;
+        width: 90px;
+        height: 90px;
+        border: 6px solid #FF982D;
+        position: absolute;
+        top:38px;
+        left:69%;
+    }
+    .btnchangetitle{
+        position: relative;
+        top:38px;
+        left:20%;
+        font-family: SFNSDisplay;
+        font-size: 22px;
+        color: #FF982D;
+       
+    }
+    
+    .btnchangecontent{
+        position: relative;
+        top:43px;
+        left:37%;
+        font-family: AppleSystemUIFont;
+        font-size: 12px;
+        color: #FF982D;
+        
+    }
+    
+    .btnchangeanser{
+        
+        position: relative;
+        top:65px;
+        left:-10%;
+        font-family: SFNSDisplay;
+        font-size: 26px;
+        color:#FF982D;
+        
+    }
+    
+    .btnrestar{
+        width: 15px;
+        height: 15px;
+        background-color: #FF982D;
+        border: 3px solid #424242;
+        border-radius:50%;
+        position: relative;
+        top:-4px;
+        left:75%; 
+        padding:9px 4px 0 4px;
+    }
+    
+    .contentTitle{
+        text-align: center;
+        font-size: 24px;
+        color: #424242;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    
+    .delAllred{
+        position: relative;
+        left:72%;
+        top:-25px;
+        background: #FFD366;
+        color: #424242;
+        border: 3px solid #424242;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    .BMIList{
+        width: 95%;
+        margin: 0 2.5%;
+        height: 470px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        scroll-behavior: auto;
+    }
+    
+    .list{
+       width:100%;
+       height: 60px;
+       margin-bottom: 3%;
+       border-bottom: grey solid 1px;
+       
+    }
+    
+    .list1{
+        font-family: SFNSDisplay;
+        font-size: 20px;
+        color: #4A4A4A;
+        line-height: 62px;
+        position: relative;
+        top:0px;
+        left:10px;
+    
+        
+    }
+    .list2{
+        font-family: AppleSystemUIFont;
+        font-size: 10px;
+        color: #424242;
+        position: relative;
+        top:-35px;
+        left:100px;
+    
+    }
+    .list3{
+        font-family: SFNSDisplay;
+        font-size: 18px;
+        color: #4A4A4A;
+        position: relative;
+        top:-52px;
+        left:130px;
+        
+    }
+    .list4{
+        font-family: AppleSystemUIFont;
+        font-size: 10px;
+        color: #424242;
+        position: relative;
+        top:-50px;
+        left:180px;
+    }
+    .list5{
+        font-family: SFNSDisplay;
+        font-size: 18px;
+        color: #4A4A4A;
+        position: relative;
+        top:-65px;
+        left:240px;
+    }
+    .list6{
+        font-family: AppleSystemUIFont;
+        font-size: 10px;
+        color: #424242;
+        position: relative;
+        top:-110px;
+        left:180px;
+    }
+    .list7{
+        font-family: SFNSDisplay;
+        font-size: 18px;
+        color: #4A4A4A;
+        position: relative;
+        top:-125px;
+        left:240px
+    }
+    
+    .list8{
+        font-family: AppleSystemUIFont;
+        font-size: 10px;
+        color: #424242;
+        position: relative;
+        top:-120px;
+        left:320px;
+    }
+    
+    .footer{
+        width: 100%;
+        height: 60px;
+        background: #FFD366;
+        position: fixed;
+        bottom: 0px;
+    }
+    .footer img{
+        padding-top: 2px;
+        margin-left: 48%;
+    }
+}
+@media(max-width:375px){
+    .logo{
+        position: absolute;
+        top:45px;
+        left:5%;
+        width: 70px;
+    }
+   
+    .BMIList{
+        width: 95%;
+        margin: 0 2.5%;
+        height: 350px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        scroll-behavior: auto;
+    }
+    
+    .list{
+       width:100%;
+       height: 60px;
+       margin-bottom: 3%;
+       border-bottom: grey solid 1px;
+       
+    }
+    
+    .list1{
+        font-family: SFNSDisplay;
+        font-size: 20px;
+        color: #4A4A4A;
+        line-height: 62px;
+        position: relative;
+        top:0px;
+        left:10px;
+    
+        
+    }
+    .list2{
+        font-family: AppleSystemUIFont;
+        font-size: 10px;
+        color: #424242;
+        position: relative;
+        top:-50px;
+        left:120px;
+    
+    }
+    .list3{
+        font-family: SFNSDisplay;
+        font-size: 18px;
+        color: #4A4A4A;
+        position: relative;
+        top:-65px;
+        left:150px;
+        
+    }
+    .list4{
+        font-family: AppleSystemUIFont;
+        font-size: 10px;
+        color: #424242;
+        position: relative;
+        top:-50px;
+        left:200px;
+    }
+    .list5{
+        font-family: SFNSDisplay;
+        font-size: 18px;
+        color: #4A4A4A;
+        position: relative;
+        top:-65px;
+        left:260px;
+    }
+    .list6{
+        font-family: AppleSystemUIFont;
+        font-size: 10px;
+        color: #424242;
+        position: relative;
+        top:-110px;
+        left:200px;
+    }
+    .list7{
+        font-family: SFNSDisplay;
+        font-size: 18px;
+        color: #4A4A4A;
+        position: relative;
+        top:-125px;
+        left:260px
+    }
+    
+    .list8{
+        font-family: AppleSystemUIFont;
+        font-size: 10px;
+        color: #424242;
+        position: relative;
+        top:-110px;
+        left:120px;
+    }
+    
+
+}
+@media(max-width:320px){
+    
+    .header{
+        height: 175px;
+        background: #424242;
+    }
+    
+   
+    
+    .heightP{
+    
+        font-family:AppleSystemUIFont;
+        font-size: 14px;
+        color: #FFD366;
+        position: absolute;
+        top:40px;
+        left:30%;
+    
+    
+    }
+    
+    .heightinput{
+        width: 100px;
+        height: 20px;
+        position: absolute;
+        top:60px;
+        left:30%;
+      
+        
+    }
+    
+    .weightP{
+        font-family:AppleSystemUIFont;
+        font-size: 14px;
+        color: #FFD366;
+        position: absolute;
+        top:97px;
+        left:30%;
+    
+    
+    }
+    
+    .weightinput{
+        width: 100px;
+        height: 20px;
+        position: absolute;
+        top:120px;
+        left:30%;
+
+        
+    
+      
+    }
+    
+    .inputbtn{
+        position: absolute;
+        top:40px;
+        left:67%;
+ 
+      
+    }
+    .btnchange{
+      
+        position: absolute;
+        top:35px;
+        left:65%;
+    }
+    
+    .BMIList{
+        width: 95%;
+        margin: 0 2.5%;
+        height: 280px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        scroll-behavior: auto;
+    }
+    
+    
+    
+    .list1{
+        font-family: SFNSDisplay;
+        font-size: 20px;
+        color: #4A4A4A;
+        line-height: 62px;
+        position: relative;
+        top:0px;
+        left:5px;
+    
+        
+    }
+    .list2{
+        font-family: AppleSystemUIFont;
+        font-size: 10px;
+        color: #424242;
+        position: relative;
+        top:-50px;
+        left:100px;
+    
+    }
+    .list3{
+        font-family: SFNSDisplay;
+        font-size: 18px;
+        color: #4A4A4A;
+        position: relative;
+        top:-65px;
+        left:130px;
+        
+    }
+    .list4{
+        font-family: AppleSystemUIFont;
+        font-size: 10px;
+        color: #424242;
+        position: relative;
+        top:-50px;
+        left:180px;
+    }
+    .list5{
+        font-family: SFNSDisplay;
+        font-size: 18px;
+        color: #4A4A4A;
+        position: relative;
+        top:-65px;
+        left:235px;
+    }
+    .list6{
+        font-family: AppleSystemUIFont;
+        font-size: 10px;
+        color: #424242;
+        position: relative;
+        top:-110px;
+        left:180px;
+    }
+    .list7{
+        font-family: SFNSDisplay;
+        font-size: 18px;
+        color: #4A4A4A;
+        position: relative;
+        top:-125px;
+        left:235px
+    }
+    
+    .list8{
+        font-family: AppleSystemUIFont;
+        font-size: 10px;
+        color: #424242;
+        position: relative;
+        top:-110px;
+        left:100px;
+    }
+    .footer{
+        width: 100%;
+        height: 35px;
+        background: #FFD366;
+        position: fixed;
+        bottom: 0px;
+    }
+    .footer img{
+        padding-top: 2px;
+        margin-left: 48%;
+        width: 30px;
+        height: 30px;
+    }
+
+}
